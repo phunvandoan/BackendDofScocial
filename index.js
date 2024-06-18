@@ -23,6 +23,7 @@ const fs = require("fs");
 const io = require("socket.io")(8900, {
   cors: {
     origin: "https://sociald.vercel.app",
+    // origin: "http://localhost:3000",
   },
 });
 
@@ -98,6 +99,7 @@ mongoose.connect(
 app.use(
   cors({
     origin: "https://sociald.vercel.app",
+    // origin: "http://localhost:3000",
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
